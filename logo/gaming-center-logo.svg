@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00F0FF"/>
+      <stop offset="0.5" stop-color="#7B2FFF"/>
+      <stop offset="1" stop-color="#FF2E9A"/>
+    </linearGradient>
+    <radialGradient id="bg" cx="0.5" cy="0.45" r="0.6">
+      <stop offset="0" stop-color="#1B1240"/>
+      <stop offset="1" stop-color="#07060F"/>
+    </radialGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="800" fill="url(#bg)"/>
+
+  <!-- Hexagon shield -->
+  <polygon points="400,90 640,225 640,495 400,630 160,495 160,225"
+           fill="none" stroke="url(#neon)" stroke-width="14" stroke-linejoin="round" filter="url(#glow)"/>
+  <polygon points="400,125 610,243 610,477 400,595 190,477 190,243"
+           fill="#0E0A24" stroke="#ffffff" stroke-opacity="0.08" stroke-width="2"/>
+
+  <!-- Game controller -->
+  <g filter="url(#glow)">
+    <path d="M270 300
+             C 230 300 210 330 200 380
+             L 180 470
+             C 172 510 215 530 240 500
+             L 290 440
+             L 510 440
+             L 560 500
+             C 585 530 628 510 620 470
+             L 600 380
+             C 590 330 570 300 530 300 Z"
+          fill="url(#neon)"/>
+  </g>
+  <!-- D-pad -->
+  <g fill="#0E0A24">
+    <rect x="262" y="345" width="22" height="66" rx="4"/>
+    <rect x="240" y="367" width="66" height="22" rx="4"/>
+  </g>
+  <!-- Buttons -->
+  <g fill="#0E0A24">
+    <circle cx="530" cy="355" r="13"/>
+    <circle cx="560" cy="385" r="13"/>
+    <circle cx="500" cy="385" r="13"/>
+    <circle cx="530" cy="415" r="13"/>
+  </g>
+  <!-- Center lights -->
+  <rect x="370" y="360" width="60" height="10" rx="5" fill="#ffffff" opacity="0.9"/>
+
+  <!-- Wordmark -->
+  <text x="400" y="712" text-anchor="middle"
+        font-family="Orbitron, 'Arial Black', Impact, sans-serif" font-weight="900"
+        font-size="92" letter-spacing="10" fill="url(#neon)" filter="url(#glow)">FOUZUM</text>
+  <text x="400" y="760" text-anchor="middle"
+        font-family="'Segoe UI', Arial, sans-serif" font-weight="700"
+        font-size="28" letter-spacing="14" fill="#BFC6FF">GAMING CENTER</text>
+</svg>
